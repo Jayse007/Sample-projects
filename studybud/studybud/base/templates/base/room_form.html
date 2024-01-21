@@ -1,0 +1,10 @@
+{% extends 'base/main.html' %}
+
+{% block body %}
+   <form method="POST" action="{% url 'create-room'%}">
+     {% csrf_token %}
+      {{ form.as_p }}
+     <input type="submit" value="submit"/>
+   </form>
+
+{% endblock %}

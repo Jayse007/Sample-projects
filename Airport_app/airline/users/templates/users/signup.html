@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta name="description" content="This page is for creating account with this website name.">
+       <meta name="keywords" content="website account creation, website name, password settings">
+       <meta charset="UTF-8">
+       <title>Sign-up page</title>
+    </head>
+     
+    <body>
+         <h1>Sign up</h1>
+           
+         <form action="{% url 'signup' %}" method="POST" target="_self">
+            {% csrf_token %}
+              
+            {{ form.as_p }}
+
+            <input type="submit" name="Create User">
+
+
+
+         </form>
+           
+    </body>
+
+</html>
